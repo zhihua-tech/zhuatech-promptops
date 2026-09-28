@@ -53,3 +53,11 @@ cd frontend && npm install && npm run build
 ## 提示词 A/B 实验发布
 
 新增 `POST /api/promptops/experiments/decision`，综合双臂样本量、统计置信度、任务成功率、安全事件、P95 延迟、单位成本、护栏和负责人审批，输出 `PROMOTE / CONTINUE / STOP / ROLLBACK`，避免只看单一效果指标直接替换生产提示词。
+
+## 微信咨询
+
+商业授权、私有化部署或深度定制开发，可扫描下方二维码添加微信 `zhuatech` 或 `zhuatech2` 咨询。
+
+| 微信 zhuatech | 微信 zhuatech2 |
+| --- | --- |
+| ![知华科技微信咨询 zhuatech](docs/images/zhuatech-wechat-consulting.png) | ![知华科技微信咨询 zhuatech2](docs/images/zhuatech-wechat-consulting-2.png) |
