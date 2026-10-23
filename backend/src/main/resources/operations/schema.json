@@ -1,0 +1,102 @@
+{
+  "slug": "promptops",
+  "title": "提示词实验收益与回归门槛",
+  "fields": [
+    {
+      "key": "id",
+      "label": "记录编号",
+      "type": "ID"
+    },
+    {
+      "key": "cases",
+      "label": "配对测试样本数",
+      "type": "NUMBER",
+      "scale": 0,
+      "min": "1",
+      "max": "1000000"
+    },
+    {
+      "key": "baselinePass",
+      "label": "基线通过数",
+      "type": "NUMBER",
+      "scale": 0,
+      "min": "0",
+      "max": "1000000"
+    },
+    {
+      "key": "candidatePass",
+      "label": "候选通过数",
+      "type": "NUMBER",
+      "scale": 0,
+      "min": "0",
+      "max": "1000000"
+    },
+    {
+      "key": "criticalRegressions",
+      "label": "严重回归数",
+      "type": "NUMBER",
+      "scale": 0,
+      "min": "0",
+      "max": "1000000"
+    },
+    {
+      "key": "minimumCases",
+      "label": "最小样本数",
+      "type": "NUMBER",
+      "scale": 0,
+      "min": "1",
+      "max": "1000000"
+    },
+    {
+      "key": "candidateCost",
+      "label": "候选总成本元",
+      "type": "NUMBER",
+      "scale": 2,
+      "min": "0",
+      "max": "1000000000000"
+    },
+    {
+      "key": "requiredGainPct",
+      "label": "最低百分点提升",
+      "type": "NUMBER",
+      "scale": 4,
+      "min": "0",
+      "max": "100"
+    }
+  ],
+  "columns": [
+    {
+      "key": "gainPercentagePoints",
+      "label": "通过率提升百分点"
+    },
+    {
+      "key": "candidatePassPct",
+      "label": "候选通过率%"
+    },
+    {
+      "key": "costPerPass",
+      "label": "每成功任务成本元"
+    }
+  ],
+  "description": "比较同一评测集的新旧提示词成功率、失败增量和每成功任务成本；同时检查最小样本，不把小样本变好当作发布批准。",
+  "owner": "上海如静知华信息科技有限公司",
+  "website": "https://www.zhuatech.cn/",
+  "authorization": "商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。",
+  "version": 1,
+  "notes": "输入均须为已获授权的同口径数据。金额固定人民币元；比例为百分数。核算结果只用于复核，未审批、未写库、未发起外部调用，也未触发付款、签名、资料销毁或设备控制。建议不构成法律、安全、会计或碳核证结论。",
+  "sample": {
+    "asOf": "2026-10-23",
+    "records": [
+      {
+        "id": "ITEM-001",
+        "cases": "100",
+        "baselinePass": "80",
+        "candidatePass": "90",
+        "criticalRegressions": "0",
+        "minimumCases": "50",
+        "candidateCost": "18",
+        "requiredGainPct": "5"
+      }
+    ]
+  }
+}
