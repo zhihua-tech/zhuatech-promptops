@@ -1,0 +1,89 @@
+[
+  {
+    "patch": {},
+    "expected": {
+      "decision": "PASS",
+      "gainPercentagePoints": "#10",
+      "costPerPass": "#0.2"
+    },
+    "error": false,
+    "baseline": {
+      "decision": "PASS",
+      "gainPercentagePoints": "#10",
+      "costPerPass": "#0.2"
+    }
+  },
+  {
+    "patch": {
+      "criticalRegressions": "1"
+    },
+    "expected": {
+      "decision": "HOLD"
+    },
+    "error": false,
+    "baseline": {
+      "decision": "PASS",
+      "gainPercentagePoints": "#10",
+      "costPerPass": "#0.2"
+    }
+  },
+  {
+    "patch": {
+      "minimumCases": "101"
+    },
+    "expected": {
+      "decision": "REVIEW"
+    },
+    "error": false,
+    "baseline": {
+      "decision": "PASS",
+      "gainPercentagePoints": "#10",
+      "costPerPass": "#0.2"
+    }
+  },
+  {
+    "patch": {
+      "candidatePass": "84"
+    },
+    "expected": {
+      "decision": "HOLD"
+    },
+    "error": false,
+    "baseline": {
+      "decision": "PASS",
+      "gainPercentagePoints": "#10",
+      "costPerPass": "#0.2"
+    }
+  },
+  {
+    "patch": {
+      "candidatePass": "0",
+      "baselinePass": "0",
+      "requiredGainPct": "0"
+    },
+    "expected": {
+      "costPerPass": "N/A"
+    },
+    "error": false,
+    "baseline": {
+      "decision": "PASS",
+      "gainPercentagePoints": "#10",
+      "costPerPass": "#0.2"
+    }
+  },
+  {
+    "patch": {
+      "candidatePass": "85"
+    },
+    "expected": {
+      "decision": "PASS",
+      "gainPercentagePoints": "#5"
+    },
+    "error": false,
+    "baseline": {
+      "decision": "PASS",
+      "gainPercentagePoints": "#10",
+      "costPerPass": "#0.2"
+    }
+  }
+]

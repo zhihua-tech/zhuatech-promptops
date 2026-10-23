@@ -1,0 +1,6 @@
+{
+  "patch": {
+    "criticalRegressions": "1"
+  },
+  "description": "严重回归数改为1"
+}
